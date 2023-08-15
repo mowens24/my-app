@@ -1,5 +1,23 @@
+* {
+  box-sizing: border-box;
+
+}
+
+html {
+  background-image: url('C:\Users\micko\OneDrive\Documents\Git\X SaaS\my-app\public\background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-left: 250px;
+
 }
 
 .App-logo {
@@ -14,14 +32,15 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: transparent;
+  min-height: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  flex-direction: row;
+  align-items: flex-start ;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  position: relative;
 }
 
 .App-link {
@@ -35,4 +54,63 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.App-content {
+  background-color: transparent;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: normal;
+  justify-content: normal;
+  font-size: calc(10px + 2vmin);
+  color: #ffffff;
+  position: static; 
+  z-index: auto;
+
+}
+
+.App-content > div {
+  flex-grow: 1;
+
+}
+
+
+.Box-one {
+  font-size: calc(8px + 1vh);
+
+}
+
+.Box-two {
+  font-size: calc(8px + 1vh);
+
+}
+
+.Box-three {
+  font-size: calc(8px + 1vh);
+
+}
+
+.Sidebar  {
+  height: 100vh; 
+  width: 250px;
+  display: flex;
+  flex-grow: 1;
+  color: #ffffff;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  position: fixed; 
+
+  
+  background-color: rgba(255, 255, 255, 0.2);
+  
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  margin: 50px auto;
+  transition: background-image 0.3s ease;
 }
